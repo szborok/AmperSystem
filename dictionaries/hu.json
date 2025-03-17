@@ -1,0 +1,317 @@
+{
+  "header": {
+    "header2": "Rólunk",
+    "header3": "Szolgáltatások",
+    "header4": "Árazás",
+    "header5": "Kapcsolat"
+  },
+  "hero": {
+    "heroTitle1": "Világítás szakértői villanyszerelési szolgáltatásokkal",
+    "heroText1": "Lakossági javításoktól a komplex kereskedelmi telepítésekig, megbízható partnerünk minden villanyszerelési igényhez.",
+    "heroButton1": "Ingyenes árajánlat",
+    "heroButton2": "Sürgősségi hívás",
+    "heroCard1": "Teljes körű biztosítás",
+    "heroCard2": "Gyors válasz",
+    "heroCard3": "24/7 szolgáltatás"
+  },
+  "services": {
+    "servicesTitle10": "Szolgáltatásaink",
+    "servicesText10": "Az Amper Systemnél átfogó villanyszerelési szolgáltatásokat kínálunk lakossági és kereskedelmi ügyfelek számára egyaránt. Szakértő villanyszerelő csapatunk bármilyen méretű projektet képes kezelni, biztosítva a biztonságot, hatékonyságot és megbízhatóságot minden elvégzett munkában.",
+    "categories": [
+      {
+        "title": "Lakossági szolgáltatások",
+        "cards": [
+          {
+            "title": "Lakossági villanyszerelés",
+            "text": "Teljes körű villanyszerelési megoldások otthonok számára"
+          },
+          {
+            "title": "Világítás telepítése",
+            "text": "Egyedi világítás tervezés és telepítés"
+          },
+          {
+            "title": "Otthon automatizálás",
+            "text": "Okos otthon rendszerek integrációja"
+          },
+          {
+            "title": "Napelem telepítése",
+            "text": "Megújuló energia megoldások otthonok számára"
+          }
+        ]
+      },
+      {
+        "title": "Ipari szolgáltatások",
+        "cards": [
+          {
+            "title": "Kereskedelmi villanyszerelés",
+            "text": "Átfogó villanyszerelési szolgáltatások vállalkozások számára"
+          },
+          {
+            "title": "Ipari karbantartás",
+            "text": "Ipari villamos rendszerek rendszeres karbantartása"
+          },
+          {
+            "title": "Sürgősségi javítások",
+            "text": "24/7 sürgősségi villanyszerelési javítási szolgáltatások"
+          },
+          {
+            "title": "Biztonsági ellenőrzések",
+            "text": "Alapos villamos biztonsági auditok és tanúsítványok"
+          }
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title10": "Rólunk",
+    "text10": "Elkötelezett szakemberek csapata vagyunk, akik kiváló minőségű villanyszerelési szolgáltatásokat nyújtanak.",
+    "text11": "Küldetésünk, hogy ügyfeleink biztonságát és elégedettségét biztosítsuk magas színvonalú villanyszerelési megoldásokkal.",
+    "title30": "Értékeink",
+    "text30": "Hiszünk az integritásban, a minőségben és az ügyfél elégedettségében.",
+    "text40": "Év",
+    "cards": [
+      {
+        "title": "Tanúsított szakértők",
+        "text": "Csapatunk tanúsított és tapasztalt villanyszerelőkből áll."
+      },
+      {
+        "title": "Minőségi oktatás",
+        "text": "Folyamatosan képezzük magunkat, hogy naprakészek legyünk az iparági szabványokkal."
+      },
+      {
+        "title": "Időben történő szolgáltatás",
+        "text": "Értékeljük az idejét, és biztosítjuk a projektek időben történő befejezését."
+      },
+      {
+        "title": "Évek tapasztalata",
+        "text": "Évek tapasztalatával rendelkezünk az iparágban."
+      },
+      {
+        "title": "Helyszín",
+        "text": "A város szívében található, könnyen elérhető ügyfeleink számára."
+      },
+      {
+        "title": "Flotta",
+        "text": "Szolgáltató járműveink flottája mindig készen áll az Ön igényeinek kielégítésére."
+      },
+      {
+        "title": "Globális elérés",
+        "text": "Globális jelenléttel rendelkezünk, világszerte nyújtva szolgáltatásokat ügyfeleinknek."
+      }
+    ]
+  },
+  "pricing": {
+    "title1": "Árazási terveink",
+    "text1": "Válassza ki az Ön igényeinek leginkább megfelelő tervet. Minden tervünk 24/7 támogatással és elégedettségi garanciával jár.",
+    "categories": [
+      {
+        "title": "Általános villanyszerelési szolgáltatások",
+        "text": "Széles körű villanyszerelési szolgáltatásokat kínálunk az Ön igényeinek megfelelően.",
+        "jobs": [
+          {
+            "name": "Világítótestek telepítése",
+            "details": "",
+            "priceRange": "$133 – $414"
+          },
+          {
+            "name": "Villamos panel frissítése",
+            "details": "",
+            "priceRange": "$1,100 – $2,500"
+          },
+          {
+            "name": "Otthoni generátor telepítése",
+            "details": "",
+            "priceRange": "$3,000 – $5,000"
+          },
+          {
+            "name": "Villamos kapcsoló telepítése",
+            "details": "",
+            "priceRange": "$150 – $250"
+          },
+          {
+            "name": "Villamos aljzat telepítése",
+            "details": "",
+            "priceRange": "$120 – $150"
+          },
+          {
+            "name": "Ventilátor telepítése",
+            "details": "",
+            "priceRange": "$150 – $350"
+          },
+          {
+            "name": "Otthoni automatizálási rendszer telepítése",
+            "details": "",
+            "priceRange": "$600 – $1,800"
+          },
+          {
+            "name": "Jacuzzi vezetékezés / csővezeték telepítése",
+            "details": "",
+            "priceRange": "$800 – $1,500"
+          },
+          {
+            "name": "Elektromos autó töltőállomás telepítése",
+            "details": "",
+            "priceRange": "$750 – $2,600"
+          },
+          {
+            "name": "Ajtócsengő, füst- vagy szén-monoxid érzékelő telepítése",
+            "details": "",
+            "priceRange": "$90 – $150"
+          },
+          {
+            "name": "Villamos vezetékezés",
+            "details": "",
+            "priceRange": "$6 – $8 per foot"
+          },
+          {
+            "name": "Strukturált vezetékezés",
+            "details": "",
+            "priceRange": "+$2 per foot"
+          },
+          {
+            "name": "Alacsony feszültségű vezetékezés",
+            "details": "",
+            "priceRange": "$0.40 – $0.62"
+          }
+        ]
+      },
+      {
+        "title": "Speciális villanyszerelési szolgáltatások",
+        "text": "Speciális villanyszerelési szolgáltatásaink összetettebb projektekhez készültek.",
+        "jobs": [
+          {
+            "name": "Alapvető otthoni újravezetékezés",
+            "details": "Alapvető otthoni újravezetékezés részletei",
+            "priceRange": "$2,500 – $6,000"
+          },
+          {
+            "name": "Fő fal vezetékezés",
+            "details": "Fő fal vezetékezés részletei",
+            "priceRange": "$6,000 – $10,000"
+          },
+          {
+            "name": "Gomb és cső eltávolítása",
+            "details": "",
+            "priceRange": "$4,000 – $6,500"
+          },
+          {
+            "name": "Gomb és cső engedély",
+            "details": "",
+            "priceRange": "$200 – $600"
+          }
+        ]
+      }
+    ]
+  },
+  "workProcess": {
+    "title": "Munkafolyamatunk",
+    "text": "Minden projektben a hatékonyságra és az átláthatóságra törekszünk. Íme, mire számíthat, ha velünk dolgozik:",
+    "cards": [
+      {
+        "title": "Kapcsolatfelvétel",
+        "text": "Vegye fel velünk a kapcsolatot telefonon vagy e-mailben, hogy megbeszéljük villanyszerelési igényeit és projekt követelményeit."
+      },
+      {
+        "title": "Helyszíni felmérés",
+        "text": "Alapos helyszíni felmérést végzünk, hogy megértsük a munka terjedelmét. Egyedi díj vonatkozik rá, amelyet levonunk a végső projektköltségből, ha minket választ."
+      },
+      {
+        "title": "Részletes árajánlat",
+        "text": "A felmérés alapján átfogó árajánlatot kap e-mailben vagy SMS-ben."
+      },
+      {
+        "title": "Projekt ütemezése",
+        "text": "Az árajánlat elfogadása után ütemezzük a munkát egy mindkét fél számára kényelmes időpontban."
+      },
+      {
+        "title": "Szakértői kivitelezés",
+        "text": "Tanúsított szakembereink csapata hatékonyan végzi el a projektet, a legmagasabb minőségi és biztonsági szabványok betartásával."
+      }
+    ]
+  },
+  "testimonials": {
+    "title1": "Mit mondanak ügyfeleink",
+    "text1": "Ne csak a mi szavunkat vegye alapul. Íme, mit mondanak néhány elégedett ügyfelünk az Amper Systemmel szerzett tapasztalataikról. Büszkék vagyunk arra, hogy elnyertük bizalmukat és hűségüket.",
+    "items": [
+      {
+        "name": "Kiss János",
+        "role": "Háztulajdonos",
+        "content": "Az Amper System csodálatos munkát végzett a házam teljes újravezetékelésével. A csapatuk professzionális, hatékony volt, és mindent makulátlanul hagytak. Nem is lehetnék elégedettebb az eredménnyel!"
+      },
+      {
+        "name": "Nagy Mária",
+        "role": "Vállalkozó",
+        "content": "Az Amper Systemet bíztuk meg az irodánk felújításával, és felülmúlták elvárásainkat. Szakértelmük a kereskedelmi villanyszerelési munkákban páratlan. Nagyon ajánlom őket!"
+      },
+      {
+        "name": "Kovács Péter",
+        "role": "Ingatlankezelő",
+        "content": "Évek óta az Amper Systemet használom minden ingatlanomhoz. 24/7-es vészhelyzeti szolgáltatásuk számtalan fejfájástól mentett meg. Megbízható és szavahihető!"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Kapcsolatfelvétel",
+    "text": "Van kérdése vagy szüksége van szolgáltatásainkra? Segítünk! Töltse ki az alábbi űrlapot, és egyik szakértő villanyszerelőnk hamarosan felveszi Önnel a kapcsolatot. Sürgős esetekben kérjük, hívja 24/7 forródrótunkat.",
+
+    "fields": {
+      "name": {
+        "title": "Név",
+        "placeholder": "Teszt Elek"
+      },
+      "email": {
+        "title": "Email",
+        "placeholder": "example@gmail.com"
+      },
+      "phone": {
+        "title": "Telefonszám",
+        "placeholder": "+36301234567"
+      },
+      "message": {
+        "title": "Üzenet",
+        "placeholder": "Írja ide üzenetét"
+      }
+    },
+
+    "errors": {
+      "required": "kötelező",
+      "invalidEmail": "Az email cím érvénytelen",
+      "invalidPhone": "A telefonszám érvénytelen"
+    },
+
+    "info": {
+      "title": "Kapcsolati információk",
+      "businessHours": "Üzleti órák",
+      "emergency": "24/7 sürgősségi szolgáltatás elérhető",
+      "submit": "Üzenet küldése"
+    }
+  },
+  "footer": {
+    "title1": "{{companyInfo.name}}",
+    "text11": "Teljes körű biztosítás",
+    "text12": "24/7 sürgősségi szolgáltatás",
+    "title2": "Gyors linkek",
+    "text21": "Szolgáltatások",
+    "text22": "Rólunk",
+    "text23": "Árazás",
+    "text24": "Vélemények",
+    "text25": "Kapcsolat",
+    "title3": "Kapcsolatfelvétel",
+    "footerRights": "Minden jog fenntartva."
+  },
+  "whyChooseUs": {
+    "title": "Miért válassza az",
+    "company": "Amper System-et",
+    "advantageTitle": "A szakmai előny",
+    "experienceTitle": "Ipari tapasztalat",
+    "experienceText": "Több mint két évtizedes tapasztalattal a lakossági és ipari villanyszerelési szolgáltatások terén, szakértelmet és megbízhatóságot nyújtunk minden általunk vállalt projektben.",
+    "yearsLabel": "Év tapasztalat",
+    "projectsLabel": "Befejezett projekt",
+    "reason1": "Professzionális és tanúsított villanyszerelők",
+    "reason2": "24/7 sürgősségi szolgáltatás elérhetősége",
+    "reason3": "Versenyképes és átlátható árazás",
+    "reason4": "Legújabb eszközök és technológia",
+    "reason5": "Teljes körűen biztosított és engedélyezett",
+    "reason6": "Ügyfél elégedettségi garancia"
+  }
+}

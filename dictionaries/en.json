@@ -1,0 +1,320 @@
+{
+  "header": {
+    "header2": "About",
+    "header3": "Services",
+    "header4": "Pricing",
+    "header5": "Contact"
+  },
+  "hero": {
+    "heroTitle1": "Powering Your World with Expert Electrical Services",
+    "heroText1": "From residential repairs to complex commercial installations, we're your trusted partner for all electrical needs.",
+    "heroButton1": "Get a Free Quote",
+    "heroButton2": "Emergency Call",
+    "heroCard1": "Fully Insured",
+    "heroCard2": "Fast Response",
+    "heroCard3": "24/7 Service"
+  },
+  "services": {
+    "servicesTitle10": "Our Services",
+    "servicesText10": "At Amper System, we offer a comprehensive range of electrical services for both residential and commercial clients. Our team of expert electricians is equipped to handle projects of any size, ensuring safety, efficiency, and reliability in every job we undertake.",
+    "categories": [
+      {
+        "title": "Residential Services",
+        "cards": [
+          {
+            "title": "Residential Electrical",
+            "text": "Complete electrical solutions for homes"
+          },
+          {
+            "title": "Lighting Installation",
+            "text": "Custom lighting design and installation"
+          },
+          {
+            "title": "Home Automation",
+            "text": "Smart home systems integration"
+          },
+          {
+            "title": "Solar Panel Installation",
+            "text": "Renewable energy solutions for homes"
+          }
+        ]
+      },
+      {
+        "title": "Industrial Services",
+        "cards": [
+          {
+            "title": "Commercial Electrical",
+            "text": "Comprehensive electrical services for businesses"
+          },
+          {
+            "title": "Industrial Maintenance",
+            "text": "Regular upkeep of industrial electrical systems"
+          },
+          {
+            "title": "Emergency Repairs",
+            "text": "24/7 emergency electrical repair services"
+          },
+          {
+            "title": "Safety Inspections",
+            "text": "Through electrical safety audits and certifications"
+          }
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title10": "About Us",
+    "text10": "We are a team of dedicated professionals providing top-notch electrical services.",
+    "text11": "Our mission is to ensure the safety and satisfaction of our clients through high-quality electrical solutions.",
+    "title30": "Our Values",
+    "text30": "We believe in integrity, quality, and customer satisfaction.",
+    "text40": "Year",
+    "cards": [
+      {
+        "title": "Certified Experts",
+        "text": "Our team consists of certified and experienced electricians."
+      },
+      {
+        "title": "Quality Education",
+        "text": "We continuously educate ourselves to stay updated with the latest industry standards."
+      },
+      {
+        "title": "Timely Service",
+        "text": "We value your time and ensure timely completion of projects."
+      },
+      {
+        "title": "Years of Experience",
+        "text": "We have years of experience in the industry."
+      },
+      {
+        "title": "Location",
+        "text": "We are located in the heart of the city, easily accessible to our clients."
+      },
+      {
+        "title": "Fleet",
+        "text": "Our fleet of service vehicles is always ready to respond to your needs."
+      },
+      {
+        "title": "Global Reach",
+        "text": "We have a global presence, providing services to clients worldwide."
+      }
+    ]
+  },
+  "pricing": {
+    "title1": "Our Pricing Plans",
+    "text1": "Choose the plan that best fits your needs. All plans come with our 24/7 support and satisfaction guarantee.",
+    "categories": [
+      {
+        "title": "General Electrical Services",
+        "text": "We offer a wide range of general electrical services to meet your needs.",
+        "jobs": [
+          {
+            "name": "Install Light Fixtures",
+            "details": "",
+            "priceRange": "$133 – $414"
+          },
+          {
+            "name": "Upgrade Electrical Panel",
+            "details": "",
+            "priceRange": "$1,100 – $2,500"
+          },
+          {
+            "name": "Install Home Generator",
+            "details": "",
+            "priceRange": "$3,000 – $5,000"
+          },
+          {
+            "name": "Install Electrical Switch",
+            "details": "",
+            "priceRange": "$150 – $250"
+          },
+          {
+            "name": "Install Electrical Outlet",
+            "details": "",
+            "priceRange": "$120 – $150"
+          },
+          {
+            "name": "Fan Installation",
+            "details": "",
+            "priceRange": "$150 – $350"
+          },
+          {
+            "name": "Install Home Automation System",
+            "details": "",
+            "priceRange": "$600 – $1,800"
+          },
+          {
+            "name": "Install Hot Tub Wiring / Conduit",
+            "details": "",
+            "priceRange": "$800 – $1,500"
+          },
+          {
+            "name": "Install Electric Car Charging Station",
+            "details": "",
+            "priceRange": "$750 – $2,600"
+          },
+          {
+            "name": "Install Door Bell, Smoke or Carbon Monoxide Detector",
+            "details": "",
+            "priceRange": "$90 – $150"
+          },
+          {
+            "name": "Electrical Wiring",
+            "details": "",
+            "priceRange": "$6 – $8 per foot"
+          },
+          {
+            "name": "Structured Wiring",
+            "details": "",
+            "priceRange": "+$2 per foot"
+          },
+          {
+            "name": "Low-Voltage Wiring",
+            "details": "",
+            "priceRange": "$0.40 – $0.62"
+          }
+        ]
+      },
+      {
+        "title": "Advanced Electrical Services",
+        "text": "Our advanced electrical services are designed for more complex projects.",
+        "jobs": [
+          {
+            "name": "Basic Home Rewiring",
+            "details": "Basic home rewiring details",
+            "priceRange": "$2,500 – $6,000"
+          },
+          {
+            "name": "Main Wall Wiring",
+            "details": "Main wall wiring details",
+            "priceRange": "$6,000 – $10,000"
+          },
+          {
+            "name": "Knob and Tube Removal",
+            "details": "",
+            "priceRange": "$4,000 – $6,500"
+          },
+          {
+            "name": "Knob and Tube Permit",
+            "details": "",
+            "priceRange": "$200 – $600"
+          }
+        ]
+      }
+    ]
+  },
+  "workProcess": {
+    "title": "Our Work Process",
+    "text": "We strive for efficiency and transparency in every project. Here's what you can expect when working with us:",
+    "cards": [
+      {
+        "title": "Contact Us",
+        "text": "Reach out to us via phone or email to discuss your electrical needs and project requirements."
+      },
+      {
+        "title": "On-Site Assessment",
+        "text": "We conduct a thorough on-site assessment to understand the scope of work. A custom fee applies, which is deducted from the final project cost if you choose us."
+      },
+      {
+        "title": "Detailed Quote",
+        "text": "Based on our assessment, you'll receive a comprehensive quote via email or text message."
+      },
+      {
+        "title": "Project Scheduling",
+        "text": "Upon accepting the quote, we'll schedule the work at a time that's convenient for both parties."
+      },
+      {
+        "title": "Expert Execution",
+        "text": "Our team of certified professionals will complete your project efficiently, adhering to the highest standards of quality and safety."
+      }
+    ]
+  },
+  "testimonials": {
+    "title1": "What Our Clients Say",
+    "text1": "Don't just take our word for it. Here's what some of our satisfied customers have to say about their experience with Amper System. We're proud to have earned their trust and loyalty.",
+    "items": [
+      {
+        "name": "John Doe",
+        "role": "Homeowner",
+        "content": "Amper System did an amazing job rewiring my entire house. Their team was professional, efficient, and left everything spotless. I couldn't be happier with the results!"
+      },
+      {
+        "name": "Jane Smith",
+        "role": "Business Owner",
+        "content": "We hired Amper System for our office renovation, and they exceeded our expectations. Their expertise in commercial electrical work is unmatched. Highly recommended!"
+      },
+      {
+        "name": "Mike Johnson",
+        "role": "Property Manager",
+        "content": "I've been using Amper System for all my properties for years. Their 24/7 emergency service has saved me countless headaches. Reliable and trustworthy!"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "text": "Have a question or need our services? We're here to help! Fill out the form below, and one of our expert electricians will get back to you promptly. For emergencies, please call our 24/7 hotline.",
+
+    "fields": {
+      "name": {
+        "title": "Name",
+        "placeholder": "Test Elek"
+      },
+      "email": {
+        "title": "Email",
+        "placeholder": "example@gmail.com"
+      },
+      "phone": {
+        "title": "Phone Number",
+        "placeholder": "+36301234567"
+      },
+      "message": {
+        "title": "Message",
+        "placeholder": "Write here your message"
+      }
+    },
+
+    "errors": {
+      "required": "is required",
+      "invalidEmail": "Email is invalid",
+      "invalidPhone": "Phone number is invalid"
+    },
+
+    "info": {
+      "title": "Contact Information",
+      "businessHours": "Business Hours",
+      "emergency": "24/7 Emergency Service Available",
+      "submit": "Send Message"
+    }
+  },
+  "footer": {
+    "title1": "{{companyInfo.name}}",
+    "text11": "Fully Insured",
+    "text12": "24/7 Emergency Service",
+
+    "title2": "Quick Links",
+    "text21": "Services",
+    "text22": "About",
+    "text23": "Pricing",
+    "text24": "Testimonials",
+    "text25": "Contact",
+
+    "title3": "Contact Us",
+
+    "footerRights": "All rights reserved."
+  },
+  "whyChooseUs": {
+    "title": "Why Choose",
+    "company": "Amper System",
+    "advantageTitle": "The Professional Advantage",
+    "experienceTitle": "Industry Experience",
+    "experienceText": "With over two decades of experience in both residential and industrial electrical services, we bring expertise and reliability to every project we undertake.",
+    "yearsLabel": "Years Experience",
+    "projectsLabel": "Projects Completed",
+    "reason1": "Professional and certified electricians",
+    "reason2": "24/7 emergency service availability",
+    "reason3": "Competitive and transparent pricing",
+    "reason4": "Latest tools and technology",
+    "reason5": "Fully insured and licensed",
+    "reason6": "Customer satisfaction guarantee"
+  }
+}
