@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { companyInfo } from "../../data/companyInfo";
 import { useLanguage } from "../LanguageContext";
-import { getDictionary } from "../../app/dictionaries"; // Import getDictionary
+import { useTranslation } from "../../translations/index";
 
 type FormData = {
   name: string;
@@ -20,16 +20,18 @@ type Errors = {
   message?: string;
 };
 
-export default async function Contact() {
+export default function Contact() {
+  const { language } = useLanguage();
+  const { t } = useTranslation(language);
+
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     phone: "",
     message: "",
   });
+
   const [errors, setErrors] = useState<Errors>({});
-  const { language } = useLanguage();
-  const dict = await getDictionary(language); // Fetch the dictionary based on the language
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -42,20 +44,20 @@ export default async function Contact() {
     const tempErrors: Errors = {};
     if (!formData.name.trim())
       tempErrors.name =
-        dict.contact.fields.name.title + " " + dict.contact.errors.required;
+        t("contact.fields.name.title") + " " + t("contact.errors.required");
     if (!formData.email.trim())
       tempErrors.email =
-        dict.contact.fields.email.title + " " + dict.contact.errors.required;
+        t("contact.fields.email.title") + " " + t("contact.errors.required");
     else if (!/\S+@\S+\.\S+/.test(formData.email))
-      tempErrors.email = dict.contact.errors.invalidEmail;
+      tempErrors.email = t("contact.errors.invalidEmail");
     if (!formData.phone.trim())
       tempErrors.phone =
-        dict.contact.fields.phone.title + " " + dict.contact.errors.required;
+        t("contact.fields.phone.title") + " " + t("contact.errors.required");
     else if (!/^\+?[1-9]\d{1,14}$/.test(formData.phone))
-      tempErrors.phone = dict.contact.errors.invalidPhone;
+      tempErrors.phone = t("contact.errors.invalidPhone");
     if (!formData.message.trim())
       tempErrors.message =
-        dict.contact.fields.message.title + " " + dict.contact.errors.required;
+        t("contact.fields.message.title") + " " + t("contact.errors.required");
     setErrors(tempErrors);
     return Object.keys(tempErrors).length === 0;
   };
@@ -72,10 +74,10 @@ export default async function Contact() {
     <section id="contact" className="section-padding bg-background">
       <div className="container">
         <h2 className="text-4xl font-bold mb-6 text-center">
-          <span className="text-orange">{dict.contact.title}</span>
+          <span className="text-orange">{t("contact.title")}</span>
         </h2>
         <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto text-center">
-          {dict.contact.text}
+          {t("contact.text")}
         </p>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
@@ -85,7 +87,7 @@ export default async function Contact() {
                   htmlFor="name"
                   className="block mb-2 text-sm font-medium text-foreground"
                 >
-                  {dict.contact.fields.name.title}
+                  {t("contact.fields.name.title")}
                 </label>
                 <input
                   type="text"
@@ -93,7 +95,7 @@ export default async function Contact() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder={dict.contact.fields.name.placeholder}
+                  placeholder={t("contact.fields.name.placeholder")}
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 {errors.name && (
@@ -105,7 +107,7 @@ export default async function Contact() {
                   htmlFor="email"
                   className="block mb-2 text-sm font-medium text-foreground"
                 >
-                  {dict.contact.fields.email.title}
+                  {t("contact.fields.email.title")}
                 </label>
                 <input
                   type="email"
@@ -113,7 +115,7 @@ export default async function Contact() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder={dict.contact.fields.email.placeholder}
+                  placeholder={t("contact.fields.email.placeholder")}
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 {errors.email && (
@@ -127,7 +129,7 @@ export default async function Contact() {
                   htmlFor="phone"
                   className="block mb-2 text-sm font-medium text-foreground"
                 >
-                  {dict.contact.fields.phone.title}
+                  {t("contact.fields.phone.title")}
                 </label>
                 <input
                   type="tel"
@@ -135,7 +137,7 @@ export default async function Contact() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder={dict.contact.fields.phone.placeholder}
+                  placeholder={t("contact.fields.phone.placeholder")}
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 {errors.phone && (
@@ -149,7 +151,7 @@ export default async function Contact() {
                   htmlFor="message"
                   className="block mb-2 text-sm font-medium text-foreground"
                 >
-                  {dict.contact.fields.message.title}
+                  {t("contact.fields.message.title")}
                 </label>
                 <textarea
                   id="message"
@@ -157,7 +159,7 @@ export default async function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  placeholder={dict.contact.fields.message.placeholder}
+                  placeholder={t("contact.fields.message.placeholder")}
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 ></textarea>
                 {errors.message && (
@@ -170,14 +172,14 @@ export default async function Contact() {
                 type="submit"
                 className="w-full btn bg-orange text-white hover:bg-orange/90 transition-all duration-300 flex items-center justify-center space-x-2 px-6 py-3 text-lg font-semibold rounded-md"
               >
-                <span>{dict.contact.info.submit}</span>
+                <span>{t("contact.info.submit")}</span>
                 <Mail className="h-5 w-5 ml-2" />
               </button>
             </form>
           </div>
           <div className="bg-muted p-8 rounded-lg">
             <h3 className="text-2xl font-semibold mb-6">
-              {dict.contact.info.title}
+              {t("contact.info.title")}
             </h3>
             <div className="space-y-4">
               <p className="flex items-center">
@@ -205,13 +207,13 @@ export default async function Contact() {
             </div>
             <div className="mt-8">
               <h4 className="text-xl font-semibold mb-2">
-                {dict.contact.info.businessHours}
+                {t("contact.info.businessHours")}
               </h4>
               <p>{companyInfo.businessHours.weekdays}</p>
               <p>{companyInfo.businessHours.saturday}</p>
               <p>{companyInfo.businessHours.sunday}</p>
               <p className="mt-2 font-semibold">
-                {dict.contact.info.emergency}
+                {t("contact.info.emergency")}
               </p>
             </div>
           </div>

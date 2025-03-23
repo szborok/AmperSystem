@@ -3,8 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/components/LanguageContext";
-import { Toaster } from "@/components/ui/toaster";
-import { headers } from "next/headers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,18 +24,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const headersList = headers();
-  const acceptLanguage = headersList.get("accept-language") || "";
-  const initialLocale = acceptLanguage.includes("hu") ? "hu" : "en";
-
   return (
-    <html lang={initialLocale}>
-      <body className={inter.variable}>
-        <ThemeProvider>
-          <LanguageProvider>
-            {children}
-            <Toaster />
-          </LanguageProvider>
+    <html lang="en" suppressHydrationWarning className={inter.variable}>
+      <body className="font-sans">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <LanguageProvider>{children}</LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

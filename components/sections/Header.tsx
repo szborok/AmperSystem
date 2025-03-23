@@ -1,12 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { MenuIcon, XIcon, X } from "lucide-react";
+import { MenuIcon, X } from "lucide-react";
 import Image from "next/image";
 import { companyInfo } from "../../data/companyInfo";
-
 import { useLanguage } from "../LanguageContext";
-import { getDictionary } from "../../app/dictionaries";
+import { useTranslation } from "../../translations/index";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeSwitch } from "../ThemeSwitch";
 
@@ -14,15 +13,7 @@ export default function Header() {
   const [mounted, setMounted] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const { language, setLanguage } = useLanguage();
-  const [dict, setDict] = useState<any>(null);
-
-  useEffect(() => {
-    const fetchDictionary = async () => {
-      const dictionary = await getDictionary(language);
-      setDict(dictionary);
-    };
-    fetchDictionary();
-  }, [language]);
+  const { t } = useTranslation(language);
 
   useEffect(() => setMounted(true), []);
 
@@ -49,14 +40,13 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  if (!mounted || !dict) return null;
+  if (!mounted) return null;
 
   const navItems = [
-    { name: dict.header.header1, href: "#header1" },
-    { name: dict.header.header2, href: "#header2" },
-    { name: dict.header.header3, href: "#header3" },
-    { name: dict.header.header4, href: "#header4" },
-    { name: dict.header.header5, href: "#header5" },
+    { name: t("header.header2"), href: "#about" },
+    { name: t("header.header3"), href: "#services" },
+    { name: t("header.header4"), href: "#pricing" },
+    { name: t("header.header5"), href: "#contact" },
   ];
 
   const handleNavClick = (
@@ -147,8 +137,6 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-full sm:max-w-full">
               <div className="flex items-center justify-between mb-8 py-2">
-                {" "}
-                {/* Update 3: Added py-2 */}
                 <div className="flex items-center">
                   <Image
                     src={companyInfo.images.logo || "/placeholder.svg"}
@@ -161,10 +149,8 @@ export default function Header() {
                     {companyInfo.name}
                   </span>
                 </div>
-                {/* Update 1 & 2: Added close button with increased size */}
                 <button className="p-2 rounded-full bg-muted text-muted-foreground hover:text-orange transition-colors">
-                  <X className="h-10 w-10" />{" "}
-                  {/* Update 2: Increased icon size */}
+                  <X className="h-10 w-10" />
                 </button>
               </div>
               <nav className="flex flex-col space-y-4">

@@ -10,43 +10,43 @@ import {
 } from "lucide-react";
 import { companyInfo } from "../../data/companyInfo";
 import Image from "next/image";
-import { useLanguage } from "../LanguageContext";
-import { getPageDictionary } from "@/app/dictionaries"; // Import getPageDictionary
+import { useLanguage } from "../../components/LanguageContext";
+import { useTranslation } from "../../translations/index";
 
-export default async function About() {
-  const { language } = useLanguage(); // Get the current language
-  const dict = await getPageDictionary(language); // Fetch the dictionary based on the language
+export default function About() {
+  const { language } = useLanguage();
+  const { t } = useTranslation(language);
 
   return (
     <section id="about" className="section-padding bg-muted border-b">
       <div className="container pb-8">
         <h2 className="text-4xl font-bold mb-6 text-center">
-          <span className="text-orange">{dict.about.title10}</span>
+          <span className="text-orange">{t("about.title10")}</span>
         </h2>
         <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto text-center">
-          {dict.about.text10}
+          {t("about.text10")}
         </p>
         <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
           <div>
             <p className="text-lg mb-6 text-muted-foreground">
-              {dict.about.text11}
+              {t("about.text11")}
             </p>
             <div className="grid sm:grid-cols-3 gap-6">
               {[
                 {
                   icon: ShieldCheck,
-                  title: dict.about.cards[0].title,
-                  description: dict.about.cards[0].text,
+                  title: t("about.cards.0.title"),
+                  description: t("about.cards.0.text"),
                 },
                 {
                   icon: GraduationCap,
-                  title: dict.about.cards[1].title,
-                  description: dict.about.cards[1].text,
+                  title: t("about.cards.1.title"),
+                  description: t("about.cards.1.text"),
                 },
                 {
                   icon: Clock,
-                  title: dict.about.cards[2].title,
-                  description: dict.about.cards[2].text,
+                  title: t("about.cards.2.title"),
+                  description: t("about.cards.2.text"),
                 },
               ].map((item, index) => (
                 <div
@@ -72,44 +72,38 @@ export default async function About() {
             </div>
             <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-orange text-white p-3 md:p-4 rounded-lg shadow-lg">
               <p className="text-xl md:text-2xl font-bold">20+</p>
-              <p className="text-sm md:text-base">{dict.about.text40}</p>
+              <p className="text-sm md:text-base">{t("about.text40")}</p>
             </div>
           </div>
         </div>
         <div className="mt-12">
           <h3 className="text-2xl font-bold mb-4 text-center">
-            <span className="text-orange">{dict.about.title30}</span>
+            <span className="text-orange">{t("about.title30")}</span>
           </h3>
           <p className="text-lg text-muted-foreground mb-6 text-justify">
-            {dict.about.text30}
+            {t("about.text30")}
           </p>
           <div className="grid sm:grid-cols-3 gap-6 mt-6">
             <div className="flex flex-col items-center text-center">
               <MapPin className="h-12 w-12 text-orange mb-2" />
               <h4 className="text-lg font-semibold mb-1">
-                {dict.about.cards[4].title}
+                {t("about.cards.4.title")}
               </h4>
-              <p className="text-muted-foreground">
-                {dict.about.cards[4].text}
-              </p>
+              <p className="text-muted-foreground">{t("about.cards.4.text")}</p>
             </div>
             <div className="flex flex-col items-center text-center">
               <Truck className="h-12 w-12 text-orange mb-2" />
               <h4 className="text-lg font-semibold mb-1">
-                {dict.about.cards[5].title}
+                {t("about.cards.5.title")}
               </h4>
-              <p className="text-muted-foreground">
-                {dict.about.cards[5].text}
-              </p>
+              <p className="text-muted-foreground">{t("about.cards.5.text")}</p>
             </div>
             <div className="flex flex-col items-center text-center">
               <Globe className="h-12 w-12 text-orange mb-2" />
               <h4 className="text-lg font-semibold mb-1">
-                {dict.about.cards[6].title}
+                {t("about.cards.6.title")}
               </h4>
-              <p className="text-muted-foreground">
-                {dict.about.cards[6].text}
-              </p>
+              <p className="text-muted-foreground">{t("about.cards.6.text")}</p>
             </div>
           </div>
         </div>

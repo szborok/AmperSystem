@@ -1,29 +1,27 @@
-import { Suspense } from "react";
-import Header from "@/components/sections/Header";
-import Hero from "@/components/sections/Hero";
-import Services from "@/components/sections/Services";
-import About from "@/components/sections/About";
-import Pricing from "@/components/sections/Pricing";
-import WorkProcess from "@/components/sections/WorkProcess";
-import Testimonials from "@/components/sections/Testimonials";
-import Contact from "@/components/sections/Contact";
-import Footer from "@/components/sections/Footer";
-import Loading from "./loading";
+import Header from "../components/sections/Header";
+import Hero from "../components/sections/Hero";
+import Services from "../components/sections/Services";
+import About from "../components/sections/About";
+import Pricing from "../components/sections/Pricing";
+import WorkProcess from "../components/sections/WorkProcess";
+import Testimonials from "../components/sections/Testimonials";
+import Contact from "../components/sections/Contact";
+import Footer from "../components/sections/Footer";
 
-export default function HomePage() {
+export default function Home() {
+  const language = "en";
+
   return (
-    <Suspense fallback={<Loading />}>
+    <main className="flex min-h-screen flex-col">
       <Header />
-      <main>
-        <Hero />
-        <Services />
-        <About />
-        <Pricing />
-        <WorkProcess />
-        <Testimonials />
-        <Contact />
-      </main>
+      <Hero />
+      <Services />
+      <About />
+      <Pricing />
+      <WorkProcess />
+      <Testimonials />
+      <Contact />
       <Footer />
-    </Suspense>
+    </main>
   );
 }

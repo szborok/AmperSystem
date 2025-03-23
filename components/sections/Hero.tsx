@@ -1,12 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import { ShieldCheck, Zap, Clock, Phone } from "lucide-react";
 import { companyInfo } from "../../data/companyInfo";
 import { useLanguage } from "../LanguageContext";
-import { getPageDictionary } from "@/app/dictionaries"; // Import getPageDictionary
+import { useTranslation } from "../../translations/index";
 
-export default async function Hero() {
+export default function Hero() {
   const { language } = useLanguage();
-  const dict = await getPageDictionary(language); // Fetch the dictionary based on the language
+  const { t } = useTranslation(language);
 
   return (
     <section
@@ -19,17 +21,17 @@ export default async function Hero() {
       <div className="container relative z-10">
         <div className="max-w-3xl text-white">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="text-orange">{dict.hero.heroTitle1}</span>
+            <span className="text-orange">{t("hero.heroTitle1")}</span>
           </h1>
           <p className="text-lg md:text-xl mb-10 text-gray-200 max-w-2xl">
-            {dict.hero.heroText1}
+            {t("hero.heroText1")}
           </p>
 
           <div className="flex flex-col md:flex-row gap-8 mb-12">
             {[
-              { icon: ShieldCheck, text: dict.hero.heroCard1 },
-              { icon: Zap, text: dict.hero.heroCard2 },
-              { icon: Clock, text: dict.hero.heroCard3 },
+              { icon: ShieldCheck, text: t("hero.heroCard1") },
+              { icon: Zap, text: t("hero.heroCard2") },
+              { icon: Clock, text: t("hero.heroCard3") },
             ].map((item, index) => (
               <div key={index} className="flex items-center">
                 <div
@@ -49,7 +51,7 @@ export default async function Hero() {
               href="#contact"
               className="btn bg-orange text-white hover:bg-orange/90 transition-all duration-300 flex items-center justify-center space-x-2 px-8 py-4 text-lg font-semibold rounded-full shadow-lg"
             >
-              <span>{dict.hero.heroButton1}</span>
+              <span>{t("hero.heroButton1")}</span>
               <Zap className="h-5 w-5 ml-2" />
             </Link>
             <Link
@@ -57,7 +59,7 @@ export default async function Hero() {
               className="btn bg-white bg-opacity-20 backdrop-blur-md text-white hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center space-x-2 px-8 py-4 text-lg font-semibold rounded-full shadow-lg"
             >
               <Phone className="h-5 w-5 mr-2" />
-              <span>{dict.hero.heroButton2}</span>
+              <span>{t("hero.heroButton2")}</span>
             </Link>
           </div>
         </div>
