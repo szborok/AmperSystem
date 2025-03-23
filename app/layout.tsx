@@ -1,22 +1,14 @@
-import type { Metadata } from "next";
+// app/layout.tsx
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/components/LanguageContext";
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
+const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Amper System Electrical | Professional Electrician Services",
-  description:
-    "Amper System Electrical offers expert electrical services for residential and commercial properties. 24/7 emergency service available.",
-  keywords:
-    "electrician, electrical services, residential electrician, commercial electrician, emergency electrician",
-  generator: "v0.dev",
+export const metadata = {
+  title: "Amper System",
+  description: "Electrical services for your home and business",
 };
 
 export default function RootLayout({
@@ -25,9 +17,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={inter.variable}>
-      <body className="font-sans">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <LanguageProvider>{children}</LanguageProvider>
         </ThemeProvider>
       </body>

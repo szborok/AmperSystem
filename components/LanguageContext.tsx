@@ -1,17 +1,13 @@
+// LanguageContext.tsx
 "use client";
 
-import React, {
-  createContext,
-  useContext,
-  useState,
-  type ReactNode,
-} from "react";
+import { createContext, useContext, useState, ReactNode } from "react";
 
 type Language = "en" | "hu";
 
 interface LanguageContextType {
   language: Language;
-  setLanguage: (lang: Language) => void;
+  setLanguage: (language: Language) => void;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(

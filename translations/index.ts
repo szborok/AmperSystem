@@ -1,3 +1,4 @@
+// translations/index.ts
 import enTranslations from "./en.json";
 import huTranslations from "./hu.json";
 
