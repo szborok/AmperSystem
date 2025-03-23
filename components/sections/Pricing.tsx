@@ -3,33 +3,15 @@
 import React from "react";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useLanguage } from "../LanguageContext";
-import { useTranslation } from "../../translations/index";
-
-interface Job {
-  name: string;
-  details?: string;
-  priceRange: string;
-}
-
-interface Category {
-  title: string;
-  text: string;
-  jobs: Job[];
-}
-
-interface PricingData {
-  title1: string;
-  text1: string;
-  categories: Category[];
-}
+import { useLanguage } from "@/components/LanguageContext";
+import { useTranslation } from "@/translations/index";
 
 export default function Pricing() {
   const { language } = useLanguage();
   const { t } = useTranslation(language);
 
   // Get categories as an array
-  const categories = t<Category[]>("pricing.categories");
+  const categories = t<any[]>("pricing.categories");
 
   return (
     <section
@@ -45,8 +27,8 @@ export default function Pricing() {
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {Array.isArray(categories) ? (
-            categories.map((category: Category) => (
+          {Array.isArray(categories) &&
+            categories.map((category) => (
               <div key={category.title} className="flex flex-col h-full">
                 <Card className="h-full hover:shadow-lg transition-shadow duration-300">
                   <CardHeader>
@@ -60,7 +42,7 @@ export default function Pricing() {
                     </p>
                     <Table>
                       <TableBody>
-                        {Array.isArray(category.jobs) ? (
+                        {Array.isArray(category.jobs) &&
                           category.jobs.map((job) => (
                             <TableRow
                               key={job.name}
@@ -78,21 +60,13 @@ export default function Pricing() {
                                 {job.priceRange}
                               </TableCell>
                             </TableRow>
-                          ))
-                        ) : (
-                          <TableRow>
-                            <TableCell>No jobs found</TableCell>
-                          </TableRow>
-                        )}
+                          ))}
                       </TableBody>
                     </Table>
                   </CardContent>
                 </Card>
               </div>
-            ))
-          ) : (
-            <p>No categories found</p>
-          )}
+            ))}
         </div>
       </div>
     </section>

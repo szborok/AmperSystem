@@ -1,8 +1,8 @@
 "use client";
 
 import { CheckCircleIcon } from "lucide-react";
-import { useLanguage } from "../LanguageContext";
-import { useTranslation } from "../../translations/index";
+import { useLanguage } from "@/components/LanguageContext";
+import { useTranslation } from "@/translations/index";
 
 export default function WhyChooseUs() {
   const { language } = useLanguage();

@@ -3,11 +3,11 @@
 import { useState, useEffect } from "react";
 import { MenuIcon, X } from "lucide-react";
 import Image from "next/image";
-import { companyInfo } from "../../data/companyInfo";
-import { useLanguage } from "../LanguageContext";
-import { useTranslation } from "../../translations/index";
+import { companyInfo } from "../data/companyInfo";
+import { useLanguage } from "./LanguageContext";
+import { useTranslation } from "../translations/index";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { ThemeSwitch } from "../ThemeSwitch";
+import { ThemeSwitch } from "./ThemeSwitch";
 
 export default function Header() {
   const [mounted, setMounted] = useState(false);

@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
-import { companyInfo } from "../../data/companyInfo";
-import { useLanguage } from "../LanguageContext";
-import { useTranslation } from "../../translations/index";
+import { companyInfo } from "@/data/companyInfo";
+import { useLanguage } from "@/components/LanguageContext";
+import { useTranslation } from "@/translations/index";
 
 type FormData = {
   name: string;

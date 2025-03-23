@@ -2,21 +2,13 @@
 
 import React from "react";
 import { Phone, Clipboard, Calendar, Wrench, Mail } from "lucide-react";
-import { useLanguage } from "../LanguageContext";
-import { useTranslation } from "../../translations/index";
+import { useLanguage } from "@/components/LanguageContext";
+import { useTranslation } from "@/translations/index";
 
 interface WorkProcessCard {
   title: string;
   text: string;
 }
-
-const iconMap = {
-  Phone,
-  Clipboard,
-  Calendar,
-  Wrench,
-  Mail,
-};
 
 export default function WorkProcess() {
   const { language } = useLanguage();

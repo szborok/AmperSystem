@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import { useLanguage } from "../LanguageContext";
-import { useTranslation } from "../../translations/index";
+import { useLanguage } from "@/components/LanguageContext";
+import { useTranslation } from "@/translations/index";
 
 interface Testimonial {
   content: string;

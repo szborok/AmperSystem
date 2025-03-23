@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { ShieldCheck, Zap, Clock, Phone } from "lucide-react";
-import { companyInfo } from "../../data/companyInfo";
-import { useLanguage } from "../LanguageContext";
-import { useTranslation } from "../../translations/index";
+import { companyInfo } from "@/data/companyInfo";
+import { useLanguage } from "@/components/LanguageContext";
+import { useTranslation } from "@/translations/index";
 
 export default function Hero() {
   const { language } = useLanguage();
