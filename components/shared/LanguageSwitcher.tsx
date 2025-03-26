@@ -10,33 +10,28 @@ export function LanguageSwitcher() {
   const switchToLanguage = currentLanguage === "en" ? "/hu" : "/en";
 
   return (
-    <div className="flex items-center space-x-2">
-      {/* Only switch if the current path is different */}
+    <div className="flex items-center h-10">
       {pathname && !pathname.startsWith(switchToLanguage) && (
         <Link href={switchToLanguage}>
           <button
-            className="w-8 h-8 p-0 rounded-full overflow-hidden focus:outline-none focus:ring-2 focus:ring-orange"
+            className="w-10 h-10 flex items-center justify-center rounded-full transition-opacity hover:opacity-80"
             aria-label={`Switch to ${
               currentLanguage === "en" ? "Hungarian" : "English"
             }`}
           >
-            <div className="flex items-center justify-center w-full h-full">
-              <Image
-                src={
-                  currentLanguage === "en"
-                    ? "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hungarian_flag-lmmnamp0zAC84QzgbGwImDv6SUjoxp.png"
-                    : "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/english_flag-djCOz0On3Hhbh5gPvwPNW3IYDl0BDL.png"
-                }
-                alt={
-                  currentLanguage === "en"
-                    ? "Switch to Hungarian"
-                    : "Switch to English"
-                }
-                width={40}
-                height={40}
-                className="rounded-full object-cover"
-              />
-            </div>
+            <Image
+              src={
+                currentLanguage === "en"
+                  ? "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hungarian_flag-lmmnamp0zAC84QzgbGwImDv6SUjoxp.png"
+                  : "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/english_flag-djCOz0On3Hhbh5gPvwPNW3IYDl0BDL.png"
+              }
+              alt={`Switch to ${
+                currentLanguage === "en" ? "Hungarian" : "English"
+              }`}
+              width={32}
+              height={32}
+              className="rounded-full"
+            />
           </button>
         </Link>
       )}

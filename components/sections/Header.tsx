@@ -85,7 +85,7 @@ export default function Header({ translations }: { translations: any }) {
         </nav>
 
         {/* LanguageSwitcher is placed as the last element in the row */}
-        <div className="flex items-center ml-4 mt-2">
+        <div className="flex items-center ml-4">
           <LanguageSwitcher /> {/* Language switcher is on the right side */}
         </div>
       </div>
