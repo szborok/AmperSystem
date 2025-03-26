@@ -6,11 +6,13 @@ import Image from "next/image";
 import { companyInfo } from "../../data/companyInfo";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeSwitch } from "../../components/ThemeSwitch";
+import { useLanguage } from "../../components/LanguageContext"; // Fixed the import path
+import { LanguageSwitcher } from "../../components/LanguageSwitcher"; // Import LanguageSwitcher
 
-// Modify the component to receive translations as a prop
 export default function Header({ translations }: { translations: any }) {
   const [mounted, setMounted] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const { language } = useLanguage(); // Get the current language from the context
 
   useEffect(() => setMounted(true), []);
 
@@ -39,7 +41,6 @@ export default function Header({ translations }: { translations: any }) {
 
   if (!mounted) return null;
 
-  // Use the translations object passed as a prop
   const navItems = [
     { name: translations.header.header2, href: "#about" },
     { name: translations.header.header3, href: "#services" },
@@ -47,35 +48,11 @@ export default function Header({ translations }: { translations: any }) {
     { name: translations.header.header5, href: "#contact" },
   ];
 
-  const handleNavClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    href: string
-  ) => {
-    e.preventDefault();
-    const targetId = href.replace("#", "");
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      const headerOffset = 80; // Adjust this value based on your header height
-      const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition =
-        elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <header className="bg-orange/10 dark:bg-background/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
       <div className="container py-2 flex justify-between items-center">
         <div className="flex items-center gap-4">
-          <a
-            href="#"
-            onClick={(e) => handleNavClick(e, "#")}
-            className="flex items-center"
-          >
+          <a href="#" className="flex items-center">
             <Image
               src={companyInfo.images.logo || "/placeholder.svg"}
               alt={companyInfo.name}
@@ -91,12 +68,13 @@ export default function Header({ translations }: { translations: any }) {
             <ThemeSwitch />
           </div>
         </div>
-        <nav className="hidden md:flex items-center space-x-6">
+
+        {/* Navigation items placed on the right */}
+        <nav className="hidden md:flex items-center space-x-6 ml-auto">
           {navItems.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              onClick={(e) => handleNavClick(e, item.href)}
               className={`text-foreground hover:text-orange transition-colors ${
                 activeSection === item.href?.slice(1)
                   ? "text-orange font-semibold"
@@ -107,52 +85,10 @@ export default function Header({ translations }: { translations: any }) {
             </a>
           ))}
         </nav>
-        <div className="md:hidden flex items-center space-x-2">
-          <Sheet>
-            <SheetTrigger asChild>
-              <button
-                className="p-2 rounded-full bg-muted text-muted-foreground hover:text-orange transition-colors"
-                aria-label="Toggle mobile menu"
-              >
-                <MenuIcon className="h-6 w-6" />
-              </button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-full sm:max-w-full">
-              <div className="flex items-center justify-between mb-8 py-2">
-                <div className="flex items-center">
-                  <Image
-                    src={companyInfo.images.logo || "/placeholder.svg"}
-                    alt={companyInfo.name}
-                    width={40}
-                    height={40}
-                    className="w-10 h-10 rounded-full mr-3"
-                  />
-                  <span className="text-2xl font-bold text-orange">
-                    {companyInfo.name}
-                  </span>
-                </div>
-                <button className="p-2 rounded-full bg-muted text-muted-foreground hover:text-orange transition-colors">
-                  <X className="h-10 w-10" />
-                </button>
-              </div>
-              <nav className="flex flex-col space-y-4">
-                {navItems.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    onClick={(e) => handleNavClick(e, item.href)}
-                    className={`text-lg font-medium text-foreground hover:text-orange transition-colors ${
-                      activeSection === item.href?.slice(1)
-                        ? "text-orange font-semibold"
-                        : ""
-                    }`}
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </nav>
-            </SheetContent>
-          </Sheet>
+
+        {/* LanguageSwitcher is placed as the last element in the row */}
+        <div className="flex items-center ml-4 h-full">
+          <LanguageSwitcher /> {/* Language switcher is on the right side */}
         </div>
       </div>
     </header>

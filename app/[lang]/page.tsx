@@ -10,18 +10,22 @@ import Testimonials from "../../components/sections/Testimonials";
 import Contact from "../../components/sections/Contact";
 import Footer from "../../components/sections/Footer";
 
-export default async function Home({ params }: { params: { lang: string } }) {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  // Await params to ensure it resolves correctly
+  const { lang } = await params;
+
   let translations;
 
   try {
-    // Try to dynamically import the correct language file
-    translations = await import(`../../locales/${params.lang}.json`);
+    // Dynamically import the correct language file based on params.lang
+    translations = (await import(`../../locales/${lang}.json`)).default;
   } catch (error) {
-    console.warn(
-      `Language file for '${params.lang}' not found, falling back to 'en'`
-    );
-    // Fallback to English if the language file isn't found
-    translations = await import(`../../locales/en.json`);
+    console.warn(`Language file for '${lang}' not found, falling back to 'en'`);
+    translations = (await import(`../../locales/en.json`)).default;
   }
 
   return (
