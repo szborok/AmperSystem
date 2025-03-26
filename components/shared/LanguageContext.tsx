@@ -1,33 +1,40 @@
-// LanguageContext.tsx
+// components/shared/LanguageContext.tsx
+
 "use client";
 
-import { createContext, useContext, useState, ReactNode } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 
-type Language = "en" | "hu";
-
-interface LanguageContextType {
-  language: Language;
-  setLanguage: (language: Language) => void;
+interface LanguageContextProps {
+  language: string;
+  setLanguage: (lang: string) => void;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(
+const LanguageContext = createContext<LanguageContextProps | undefined>(
   undefined
 );
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>("en");
+export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
+  const [language, setLanguage] = useState<string>("en");
+
+  useEffect(() => {
+    // Get the preferred language from the browser
+    const browserLanguage = navigator.language.startsWith("hu") ? "hu" : "en";
+    setLanguage(browserLanguage);
+  }, []);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
       {children}
     </LanguageContext.Provider>
   );
-}
+};
 
-export function useLanguage() {
+export const useLanguage = (): LanguageContextProps => {
   const context = useContext(LanguageContext);
-  if (context === undefined) {
+  if (!context) {
     throw new Error("useLanguage must be used within a LanguageProvider");
   }
   return context;
-}
+};

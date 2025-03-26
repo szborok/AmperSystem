@@ -15,7 +15,7 @@ export function LanguageSwitcher() {
       {pathname && !pathname.startsWith(switchToLanguage) && (
         <Link href={switchToLanguage}>
           <button
-            className="w-8 h-8 rounded-full overflow-hidden focus:outline-none focus:ring-2 focus:ring-orange"
+            className="w-8 h-8 p-0 rounded-full overflow-hidden focus:outline-none focus:ring-2 focus:ring-orange"
             aria-label={`Switch to ${
               currentLanguage === "en" ? "Hungarian" : "English"
             }`}
@@ -32,9 +32,9 @@ export function LanguageSwitcher() {
                     ? "Switch to Hungarian"
                     : "Switch to English"
                 }
-                width={32}
-                height={32}
-                className="rounded-full"
+                width={40}
+                height={40}
+                className="rounded-full object-cover"
               />
             </div>
           </button>

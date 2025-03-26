@@ -1,13 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { MenuIcon, X } from "lucide-react";
 import Image from "next/image";
 import { companyInfo } from "../../data/companyInfo";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeSwitch } from "../shared/ThemeSwitch";
 import { useLanguage } from "../shared/LanguageContext"; // Fixed the import path
-import { LanguageSwitcher } from "../LanguageSwitcher"; // Import LanguageSwitcher
+import { LanguageSwitcher } from "../shared/LanguageSwitcher"; // Import LanguageSwitcher
 
 export default function Header({ translations }: { translations: any }) {
   const [mounted, setMounted] = useState(false);
@@ -87,7 +85,7 @@ export default function Header({ translations }: { translations: any }) {
         </nav>
 
         {/* LanguageSwitcher is placed as the last element in the row */}
-        <div className="flex items-center ml-4 h-full">
+        <div className="flex items-center ml-4 mt-2">
           <LanguageSwitcher /> {/* Language switcher is on the right side */}
         </div>
       </div>

@@ -1,4 +1,4 @@
-// URL: app/[lang]/page.tsx
+// app/[lang]/page.tsx
 
 import Header from "../../components/sections/Header";
 import Hero from "../../components/sections/Hero";
@@ -15,13 +15,11 @@ export default async function Home({
 }: {
   params: Promise<{ lang: string }>;
 }) {
-  // Await params to ensure it resolves correctly
   const { lang } = await params;
 
   let translations;
 
   try {
-    // Dynamically import the correct language file based on params.lang
     translations = (await import(`../../locales/${lang}.json`)).default;
   } catch (error) {
     console.warn(`Language file for '${lang}' not found, falling back to 'en'`);
