@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useLanguage } from "../LanguageContext";
+import { useLanguage } from "../shared/LanguageContext";
 import { getDictionary } from "@/app/dictionaries";
 import { useToast } from "@/components/ui/use-toast";
 import { Loader2 } from "lucide-react";

@@ -1,7 +1,7 @@
 "use client";
 
 import { CheckCircleIcon } from "lucide-react";
-import { useLanguage } from "@/components/LanguageContext";
+import { useLanguage } from "@/components/shared/LanguageContext";
 import { useTranslation } from "@/translations/index";
 
 export default function WhyChooseUs() {

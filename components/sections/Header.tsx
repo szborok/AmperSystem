@@ -5,9 +5,9 @@ import { MenuIcon, X } from "lucide-react";
 import Image from "next/image";
 import { companyInfo } from "../../data/companyInfo";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { ThemeSwitch } from "../../components/ThemeSwitch";
-import { useLanguage } from "../../components/LanguageContext"; // Fixed the import path
-import { LanguageSwitcher } from "../../components/LanguageSwitcher"; // Import LanguageSwitcher
+import { ThemeSwitch } from "../shared/ThemeSwitch";
+import { useLanguage } from "../shared/LanguageContext"; // Fixed the import path
+import { LanguageSwitcher } from "../LanguageSwitcher"; // Import LanguageSwitcher
 
 export default function Header({ translations }: { translations: any }) {
   const [mounted, setMounted] = useState(false);
