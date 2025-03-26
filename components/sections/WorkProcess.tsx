@@ -1,38 +1,23 @@
-"use client";
-
 import React from "react";
 import { Phone, Clipboard, Calendar, Wrench, Mail } from "lucide-react";
-import { useLanguage } from "@/components/LanguageContext";
-import { useTranslation } from "@/translations/index";
 
-interface WorkProcessCard {
-  title: string;
-  text: string;
-}
-
-export default function WorkProcess() {
-  const { language } = useLanguage();
-  const { t } = useTranslation(language);
-
-  // Get cards as an array
-  const cards = t<WorkProcessCard[]>("workProcess.cards");
+export default function WorkProcess({ translations }: { translations: any }) {
+  const cards = translations.workProcess.cards;
+  const icons = [Phone, Clipboard, Calendar, Wrench, Mail];
 
   return (
     <section id="work-process" className="section-padding bg-background">
       <div className="container">
         <h2 className="text-4xl font-bold mb-6 text-center">
-          <span className="text-orange">{t("workProcess.title")}</span>
+          <span className="text-orange">{translations.workProcess.title}</span>
         </h2>
         <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto text-center">
-          {t("workProcess.text")}
+          {translations.workProcess.text}
         </p>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {Array.isArray(cards) ? (
-            cards.map((card: WorkProcessCard, index: number) => {
-              // Get icon based on index
-              const IconComponent = [Phone, Clipboard, Calendar, Wrench, Mail][
-                index % 5
-              ];
+            cards.map((card: any, index: number) => {
+              const IconComponent = icons[index % icons.length];
 
               return (
                 <div

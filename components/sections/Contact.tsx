@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { companyInfo } from "@/data/companyInfo";
-import { useLanguage } from "@/components/LanguageContext";
-import { useTranslation } from "@/translations/index";
 
 type FormData = {
   name: string;
@@ -20,10 +18,7 @@ type Errors = {
   message?: string;
 };
 
-export default function Contact() {
-  const { language } = useLanguage();
-  const { t } = useTranslation(language);
-
+export default function Contact({ translations }: { translations: any }) {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -44,20 +39,28 @@ export default function Contact() {
     const tempErrors: Errors = {};
     if (!formData.name.trim())
       tempErrors.name =
-        t("contact.fields.name.title") + " " + t("contact.errors.required");
+        translations.contact.fields.name.title +
+        " " +
+        translations.contact.errors.required;
     if (!formData.email.trim())
       tempErrors.email =
-        t("contact.fields.email.title") + " " + t("contact.errors.required");
+        translations.contact.fields.email.title +
+        " " +
+        translations.contact.errors.required;
     else if (!/\S+@\S+\.\S+/.test(formData.email))
-      tempErrors.email = t("contact.errors.invalidEmail");
+      tempErrors.email = translations.contact.errors.invalidEmail;
     if (!formData.phone.trim())
       tempErrors.phone =
-        t("contact.fields.phone.title") + " " + t("contact.errors.required");
+        translations.contact.fields.phone.title +
+        " " +
+        translations.contact.errors.required;
     else if (!/^\+?[1-9]\d{1,14}$/.test(formData.phone))
-      tempErrors.phone = t("contact.errors.invalidPhone");
+      tempErrors.phone = translations.contact.errors.invalidPhone;
     if (!formData.message.trim())
       tempErrors.message =
-        t("contact.fields.message.title") + " " + t("contact.errors.required");
+        translations.contact.fields.message.title +
+        " " +
+        translations.contact.errors.required;
     setErrors(tempErrors);
     return Object.keys(tempErrors).length === 0;
   };
@@ -74,10 +77,10 @@ export default function Contact() {
     <section id="contact" className="section-padding bg-background">
       <div className="container">
         <h2 className="text-4xl font-bold mb-6 text-center">
-          <span className="text-orange">{t("contact.title")}</span>
+          <span className="text-orange">{translations.contact.title}</span>
         </h2>
         <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto text-center">
-          {t("contact.text")}
+          {translations.contact.text}
         </p>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
@@ -87,7 +90,7 @@ export default function Contact() {
                   htmlFor="name"
                   className="block mb-2 text-sm font-medium text-foreground"
                 >
-                  {t("contact.fields.name.title")}
+                  {translations.contact.fields.name.title}
                 </label>
                 <input
                   type="text"
@@ -95,7 +98,7 @@ export default function Contact() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder={t("contact.fields.name.placeholder")}
+                  placeholder={translations.contact.fields.name.placeholder}
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 {errors.name && (
@@ -107,7 +110,7 @@ export default function Contact() {
                   htmlFor="email"
                   className="block mb-2 text-sm font-medium text-foreground"
                 >
-                  {t("contact.fields.email.title")}
+                  {translations.contact.fields.email.title}
                 </label>
                 <input
                   type="email"
@@ -115,7 +118,7 @@ export default function Contact() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder={t("contact.fields.email.placeholder")}
+                  placeholder={translations.contact.fields.email.placeholder}
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 {errors.email && (
@@ -129,7 +132,7 @@ export default function Contact() {
                   htmlFor="phone"
                   className="block mb-2 text-sm font-medium text-foreground"
                 >
-                  {t("contact.fields.phone.title")}
+                  {translations.contact.fields.phone.title}
                 </label>
                 <input
                   type="tel"
@@ -137,7 +140,7 @@ export default function Contact() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder={t("contact.fields.phone.placeholder")}
+                  placeholder={translations.contact.fields.phone.placeholder}
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 {errors.phone && (
@@ -151,7 +154,7 @@ export default function Contact() {
                   htmlFor="message"
                   className="block mb-2 text-sm font-medium text-foreground"
                 >
-                  {t("contact.fields.message.title")}
+                  {translations.contact.fields.message.title}
                 </label>
                 <textarea
                   id="message"
@@ -159,7 +162,7 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  placeholder={t("contact.fields.message.placeholder")}
+                  placeholder={translations.contact.fields.message.placeholder}
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 ></textarea>
                 {errors.message && (
@@ -172,14 +175,14 @@ export default function Contact() {
                 type="submit"
                 className="w-full btn bg-orange text-white hover:bg-orange/90 transition-all duration-300 flex items-center justify-center space-x-2 px-6 py-3 text-lg font-semibold rounded-md"
               >
-                <span>{t("contact.info.submit")}</span>
+                <span>{translations.contact.info.submit}</span>
                 <Mail className="h-5 w-5 ml-2" />
               </button>
             </form>
           </div>
           <div className="bg-muted p-8 rounded-lg">
             <h3 className="text-2xl font-semibold mb-6">
-              {t("contact.info.title")}
+              {translations.contact.info.title}
             </h3>
             <div className="space-y-4">
               <p className="flex items-center">
@@ -207,13 +210,13 @@ export default function Contact() {
             </div>
             <div className="mt-8">
               <h4 className="text-xl font-semibold mb-2">
-                {t("contact.info.businessHours")}
+                {translations.contact.info.businessHours}
               </h4>
               <p>{companyInfo.businessHours.weekdays}</p>
               <p>{companyInfo.businessHours.saturday}</p>
               <p>{companyInfo.businessHours.sunday}</p>
               <p className="mt-2 font-semibold">
-                {t("contact.info.emergency")}
+                {translations.contact.info.emergency}
               </p>
             </div>
           </div>

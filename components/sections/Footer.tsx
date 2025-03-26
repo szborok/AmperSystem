@@ -3,13 +3,8 @@
 import Link from "next/link";
 import { Phone, Mail, Facebook, Twitter, Instagram } from "lucide-react";
 import { companyInfo } from "@/data/companyInfo";
-import { useLanguage } from "@/components/LanguageContext";
-import { useTranslation } from "@/translations/index";
 
-export default function Footer() {
-  const { language } = useLanguage();
-  const { t } = useTranslation(language);
-
+export default function Footer({ translations }: { translations: any }) {
   return (
     <footer className="bg-muted dark:bg-gray-900 text-foreground dark:text-gray-300 py-12 border-t border-gray-200 dark:border-gray-800">
       <div className="container">
@@ -18,49 +13,49 @@ export default function Footer() {
             <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">
               {companyInfo.fullName}
             </h3>
-            <p className="mb-2">{t("footer.text11")}</p>
-            <p>{t("footer.text12")}</p>
+            <p className="mb-2">{translations.footer.text11}</p>
+            <p>{translations.footer.text12}</p>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">
-              {t("footer.title2")}
+              {translations.footer.title2}
             </h3>
             <nav className="flex flex-col space-y-2">
               <Link
                 href="#services"
                 className="hover:text-orange transition-colors"
               >
-                {t("footer.text21")}
+                {translations.footer.text21}
               </Link>
               <Link
                 href="#about"
                 className="hover:text-orange transition-colors"
               >
-                {t("footer.text22")}
+                {translations.footer.text22}
               </Link>
               <Link
                 href="#pricing"
                 className="hover:text-orange transition-colors"
               >
-                {t("footer.text23")}
+                {translations.footer.text23}
               </Link>
               <Link
                 href="#testimonials"
                 className="hover:text-orange transition-colors"
               >
-                {t("footer.text24")}
+                {translations.footer.text24}
               </Link>
               <Link
                 href="#contact"
                 className="hover:text-orange transition-colors"
               >
-                {t("footer.text25")}
+                {translations.footer.text25}
               </Link>
             </nav>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">
-              {t("footer.title3")}
+              {translations.footer.title3}
             </h3>
             <p className="flex items-center mb-2">
               <Phone className="h-5 w-5 mr-2 text-orange" />
@@ -108,7 +103,7 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
           <p className="text-gray-600 dark:text-gray-400">
             &copy; {new Date().getFullYear()} {companyInfo.fullName}.{" "}
-            {t("footer.footerRights")}
+            {translations.footer.footerRights}
           </p>
         </div>
       </div>

@@ -1,5 +1,3 @@
-"use client";
-
 import {
   LightbulbIcon as LightBulb,
   Home,
@@ -10,15 +8,31 @@ import {
   Sun,
   Cpu,
 } from "lucide-react";
-import { useLanguage } from "@/components/LanguageContext";
-import { useTranslation } from "@/translations/index";
 
-export default function Services() {
-  const { language } = useLanguage();
-  const { t } = useTranslation(language);
+// Define types for the category and card objects based on the JSON structure
+interface Card {
+  title: string;
+  text: string;
+}
 
+interface Category {
+  title: string;
+  cards: Card[];
+}
+
+interface ServicesProps {
+  translations: {
+    services: {
+      categories: Category[];
+      servicesTitle10: string;
+      servicesText10: string;
+    };
+  };
+}
+
+export default function Services({ translations }: ServicesProps) {
   // Get the categories from translations
-  const categories = t<any[]>("services.categories");
+  const categories = translations.services.categories;
 
   // Map icons to use for each service
   const residentialIcons = [Home, LightBulb, Cpu, Sun];
@@ -28,22 +42,24 @@ export default function Services() {
     <section id="services" className="section-padding bg-background border-b">
       <div className="container">
         <h2 className="text-4xl font-bold mb-6 text-center">
-          <span className="text-orange">{t("services.servicesTitle10")}</span>
+          <span className="text-orange">
+            {translations.services.servicesTitle10}
+          </span>
         </h2>
         <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto text-center">
-          {t("services.servicesText10")}
+          {translations.services.servicesText10}
         </p>
 
         <div className="grid gap-16">
           {Array.isArray(categories) &&
-            categories.map((category, categoryIndex) => (
+            categories.map((category: Category, categoryIndex: number) => (
               <div key={category.title}>
                 <h3 className="text-2xl font-semibold mb-6 text-center">
                   <span className="text-orange">{category.title}</span>
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                   {Array.isArray(category.cards) &&
-                    category.cards.map((card, cardIndex) => {
+                    category.cards.map((card: Card, cardIndex: number) => {
                       // Select icon based on category
                       const icons =
                         categoryIndex === 0

@@ -4,16 +4,13 @@ import { useState, useEffect } from "react";
 import { MenuIcon, X } from "lucide-react";
 import Image from "next/image";
 import { companyInfo } from "../../data/companyInfo";
-import { useLanguage } from "../../components/LanguageContext";
-import { useTranslation } from "../../translations/index";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeSwitch } from "../../components/ThemeSwitch";
 
-export default function Header() {
+// Modify the component to receive translations as a prop
+export default function Header({ translations }: { translations: any }) {
   const [mounted, setMounted] = useState(false);
   const [activeSection, setActiveSection] = useState("");
-  const { language, setLanguage } = useLanguage();
-  const { t } = useTranslation(language);
 
   useEffect(() => setMounted(true), []);
 
@@ -42,11 +39,12 @@ export default function Header() {
 
   if (!mounted) return null;
 
+  // Use the translations object passed as a prop
   const navItems = [
-    { name: t("header.header2"), href: "#about" },
-    { name: t("header.header3"), href: "#services" },
-    { name: t("header.header4"), href: "#pricing" },
-    { name: t("header.header5"), href: "#contact" },
+    { name: translations.header.header2, href: "#about" },
+    { name: translations.header.header3, href: "#services" },
+    { name: translations.header.header4, href: "#pricing" },
+    { name: translations.header.header5, href: "#contact" },
   ];
 
   const handleNavClick = (
@@ -67,10 +65,6 @@ export default function Header() {
         behavior: "smooth",
       });
     }
-  };
-
-  const toggleLanguage = () => {
-    setLanguage(language === "en" ? "hu" : "en");
   };
 
   return (
@@ -112,20 +106,8 @@ export default function Header() {
               {item.name}
             </a>
           ))}
-          <button
-            onClick={toggleLanguage}
-            className="text-foreground hover:text-orange transition-colors"
-          >
-            {language === "en" ? "HU" : "EN"}
-          </button>
         </nav>
         <div className="md:hidden flex items-center space-x-2">
-          <button
-            onClick={toggleLanguage}
-            className="text-foreground hover:text-orange transition-colors"
-          >
-            {language === "en" ? "HU" : "EN"}
-          </button>
           <Sheet>
             <SheetTrigger asChild>
               <button
@@ -169,10 +151,6 @@ export default function Header() {
                   </a>
                 ))}
               </nav>
-              <div className="mt-8 flex items-center justify-between">
-                <span className="text-sm font-medium">Theme</span>
-                <ThemeSwitch />
-              </div>
             </SheetContent>
           </Sheet>
         </div>

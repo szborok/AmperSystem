@@ -1,17 +1,9 @@
-"use client";
-
 import React from "react";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useLanguage } from "@/components/LanguageContext";
-import { useTranslation } from "@/translations/index";
 
-export default function Pricing() {
-  const { language } = useLanguage();
-  const { t } = useTranslation(language);
-
-  // Get categories as an array
-  const categories = t<any[]>("pricing.categories");
+export default function Pricing({ translations }: { translations: any }) {
+  const categories = translations.pricing.categories;
 
   return (
     <section
@@ -20,15 +12,15 @@ export default function Pricing() {
     >
       <div className="container px-4 py-16 mx-auto">
         <h2 className="text-4xl font-bold mb-6 text-center">
-          <span className="text-orange">{t("pricing.title1")}</span>
+          <span className="text-orange">{translations.pricing.title1}</span>
         </h2>
         <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto text-center">
-          {t("pricing.text1")}
+          {translations.pricing.text1}
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
           {Array.isArray(categories) &&
-            categories.map((category) => (
+            categories.map((category: any) => (
               <div key={category.title} className="flex flex-col h-full">
                 <Card className="h-full hover:shadow-lg transition-shadow duration-300">
                   <CardHeader>
@@ -43,7 +35,7 @@ export default function Pricing() {
                     <Table>
                       <TableBody>
                         {Array.isArray(category.jobs) &&
-                          category.jobs.map((job) => (
+                          category.jobs.map((job: any) => (
                             <TableRow
                               key={job.name}
                               className="hover:bg-muted/50 transition-colors"

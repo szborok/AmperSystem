@@ -2,8 +2,6 @@
 
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import { useLanguage } from "@/components/LanguageContext";
-import { useTranslation } from "@/translations/index";
 
 interface Testimonial {
   content: string;
@@ -11,13 +9,11 @@ interface Testimonial {
   role: string;
 }
 
-export default function Testimonials() {
-  const { language } = useLanguage();
-  const { t } = useTranslation(language);
+export default function Testimonials({ translations }: { translations: any }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Get testimonials as an array
-  const testimonials = t<Testimonial[]>("testimonials.items");
+  const testimonials: Testimonial[] = translations.testimonials.items;
 
   const nextTestimonial = () => {
     if (!Array.isArray(testimonials) || testimonials.length === 0) return;
@@ -35,10 +31,12 @@ export default function Testimonials() {
     <section id="testimonials" className="section-padding bg-muted">
       <div className="container">
         <h2 className="text-4xl font-bold mb-6 text-center">
-          <span className="text-orange">{t("testimonials.title1")}</span>
+          <span className="text-orange">
+            {translations.testimonials.title1}
+          </span>
         </h2>
         <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto text-center">
-          {t("testimonials.text1")}
+          {translations.testimonials.text1}
         </p>
         <div className="relative max-w-3xl mx-auto">
           {Array.isArray(testimonials) && testimonials.length > 0 ? (
