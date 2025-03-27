@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Amper System",
   description: "Electrical services for your home and business",
+  icons: "../../public/favicon.ico",
 };
 
 export default function RootLayout({
