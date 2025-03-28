@@ -1,11 +1,4 @@
-import {
-  ShieldCheck,
-  GraduationCap,
-  Clock,
-  MapPin,
-  Truck,
-  Globe,
-} from "lucide-react";
+import { ShieldCheck, GraduationCap, MapPin, Truck, Check } from "lucide-react";
 import { companyInfo } from "@/data/companyInfo";
 import Image from "next/image";
 
@@ -22,10 +15,10 @@ export default function About({ translations }: { translations: any }) {
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
           <div>
-            <p className="text-lg mb-6 text-muted-foreground">
+            <p className="text-lg mb-6 text-muted-foreground text-center mx-auto max-w-xl">
               {translations.about.text11}
             </p>
-            <div className="grid sm:grid-cols-3 gap-6">
+            <div className="flex flex-wrap justify-center gap-6">
               {[
                 {
                   icon: ShieldCheck,
@@ -38,14 +31,14 @@ export default function About({ translations }: { translations: any }) {
                   description: translations.about.cards[1].text,
                 },
                 {
-                  icon: Clock,
+                  icon: Check,
                   title: translations.about.cards[2].title,
                   description: translations.about.cards[2].text,
                 },
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center text-center"
+                  className="flex flex-col items-center text-center w-full sm:w-[calc(33.333%-1rem)] max-w-[200px]"
                 >
                   <item.icon className="h-12 w-12 text-orange mb-2" />
                   <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
@@ -78,10 +71,10 @@ export default function About({ translations }: { translations: any }) {
           <h3 className="text-2xl font-bold mb-4 text-center">
             <span className="text-orange">{translations.about.title30}</span>
           </h3>
-          <p className="text-lg text-muted-foreground mb-6 text-justify">
+          <p className="text-lg text-muted-foreground mb-6 text-center mx-auto max-w-3xl">
             {translations.about.text30}
           </p>
-          <div className="grid sm:grid-cols-3 gap-6 mt-6">
+          <div className="flex flex-wrap justify-center gap-6 mt-6">
             {[
               {
                 icon: MapPin,
@@ -93,15 +86,10 @@ export default function About({ translations }: { translations: any }) {
                 title: translations.about.cards[5].title,
                 description: translations.about.cards[5].text,
               },
-              {
-                icon: Globe,
-                title: translations.about.cards[6].title,
-                description: translations.about.cards[6].text,
-              },
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center text-center"
+                className="flex flex-col items-center text-center w-full sm:w-[calc(50%-1rem)] max-w-[250px]"
               >
                 <item.icon className="h-12 w-12 text-orange mb-2" />
                 <h4 className="text-lg font-semibold mb-1">{item.title}</h4>

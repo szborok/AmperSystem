@@ -10,7 +10,7 @@
     "heroText1": "Lakossági javításoktól a komplex kereskedelmi telepítésekig, megbízható partnerünk minden villanyszerelési igényhez.",
     "heroButton1": "Ingyenes árajánlat",
     "heroButton2": "Sürgősségi hívás",
-    "heroCard1": "Teljes körű biztosítás",
+    "heroCard1": "Teljes körű biztosítottság",
     "heroCard2": "Gyors válasz",
     "heroCard3": "24/7 szolgáltatás",
     "heroCard4": "Megbízható szakértők",
@@ -24,20 +24,16 @@
         "title": "Lakossági szolgáltatások",
         "cards": [
           {
-            "title": "Lakossági villanyszerelés",
-            "text": "Teljes körű villanyszerelési megoldások otthonok számára"
+            "title": "Háztartási gépek beszerelése",
+            "text": "Garanciális bekötése tűzhelyek, sütők és egyéb háztartartási berendezéseknek"
           },
           {
-            "title": "Világítás telepítése",
-            "text": "Egyedi világítás tervezés és telepítés"
+            "title": "Biztonság technika",
+            "text": "IDE TALALJATOK KI SZOVEGET"
           },
           {
-            "title": "Otthon automatizálás",
-            "text": "Okos otthon rendszerek integrációja"
-          },
-          {
-            "title": "Napelem telepítése",
-            "text": "Megújuló energia megoldások otthonok számára"
+            "title": "SOS Villanyszerelés",
+            "text": "IDE TALALJATOK KI SZOVEGET"
           }
         ]
       },
@@ -45,19 +41,19 @@
         "title": "Ipari szolgáltatások",
         "cards": [
           {
-            "title": "Kereskedelmi villanyszerelés",
-            "text": "Átfogó villanyszerelési szolgáltatások vállalkozások számára"
+            "title": "Teljes projektek kivitelezés",
+            "text": "Átfogó villanyszerelési szolgáltatások vállalkozások számára - ATNEZNI"
           },
           {
-            "title": "Ipari karbantartás",
-            "text": "Ipari villamos rendszerek rendszeres karbantartása"
+            "title": "Épület karbantartás",
+            "text": "IDE TALALJATOK KI SZOVEGET"
           },
           {
-            "title": "Sürgősségi javítások",
+            "title": "Sürgősségi javítások 0-24",
             "text": "24/7 sürgősségi villanyszerelési javítási szolgáltatások"
           },
           {
-            "title": "Biztonsági ellenőrzések",
+            "title": "Villamos Biztonsági Felülvizsgálat",
             "text": "Alapos villamos biztonsági auditok és tanúsítványok"
           }
         ]
@@ -73,16 +69,16 @@
     "text40": "Év",
     "cards": [
       {
-        "title": "Tanúsított szakértők",
-        "text": "Csapatunk tanúsított és tapasztalt villanyszerelőkből áll."
+        "title": "Teljes biztosított",
+        "text": "Cégünk felelősségbiztosítással rendelkezik, biztosítva ügyfeleink nyugalmát."
       },
       {
-        "title": "Minőségi oktatás",
-        "text": "Folyamatosan képezzük magunkat, hogy naprakészek legyünk az iparági szabványokkal."
+        "title": "Minősített szakemberek",
+        "text": "kollegáink szakterületükön kiemelt kvalítással rendelkeznek"
       },
       {
-        "title": "Időben történő szolgáltatás",
-        "text": "Értékeljük az idejét, és biztosítjuk a projektek időben történő befejezését."
+        "title": "Szavattosság és garancia",
+        "text": "Az elvégzett szerelési munkára 5 év garanciát biztosítunk a beépített termékekre a gyártói garanciát szavatoljuk."
       },
       {
         "title": "Évek tapasztalata",
@@ -95,10 +91,6 @@
       {
         "title": "Flotta",
         "text": "Szolgáltató járműveink flottája mindig készen áll az Ön igényeinek kielégítésére."
-      },
-      {
-        "title": "Globális elérés",
-        "text": "Globális jelenléttel rendelkezünk, világszerte nyújtva szolgáltatásokat ügyfeleinknek."
       }
     ]
   },

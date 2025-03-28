@@ -22,8 +22,8 @@ export function LanguageSwitcher() {
             <Image
               src={
                 currentLanguage === "en"
-                  ? "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hungarian_flag-lmmnamp0zAC84QzgbGwImDv6SUjoxp.png"
-                  : "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/english_flag-djCOz0On3Hhbh5gPvwPNW3IYDl0BDL.png"
+                  ? "/hungarian_flag.png"
+                  : "/english_flag.png"
               }
               alt={`Switch to ${
                 currentLanguage === "en" ? "Hungarian" : "English"
