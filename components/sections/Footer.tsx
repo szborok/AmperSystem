@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Phone, Mail, Facebook, Twitter, Instagram } from "lucide-react";
 import { companyInfo } from "@/data/companyInfo";
+import { ThemeSwitch } from "../shared/ThemeSwitch";
 
 export default function Footer({ translations }: { translations: any }) {
   return (
@@ -97,6 +98,9 @@ export default function Footer({ translations }: { translations: any }) {
               >
                 <Instagram className="h-6 w-6" />
               </a>
+            </div>
+            <div className="mt-4 flex justify-start">
+              <ThemeSwitch />
             </div>
           </div>
         </div>

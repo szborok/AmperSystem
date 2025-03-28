@@ -6,7 +6,7 @@ import {
   Truck,
   Globe,
 } from "lucide-react";
-import { companyInfo } from "../../data/companyInfo";
+import { companyInfo } from "@/data/companyInfo";
 import Image from "next/image";
 
 export default function About({ translations }: { translations: any }) {

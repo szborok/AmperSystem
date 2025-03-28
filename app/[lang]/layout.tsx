@@ -1,15 +1,16 @@
 // app/layout.tsx
 import { Inter } from "next/font/google";
-import "../globals.css";
+import "../../app/globals.css";
 import { ThemeProvider } from "@/components/shared/ThemeProvider";
 import { LanguageProvider } from "@/components/shared/LanguageContext";
+import { companyInfo } from "@/data/companyInfo";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Amper System",
   description: "Electrical services for your home and business",
-  icons: "../../public/favicon.ico",
+  icons: companyInfo.images.favicon,
 };
 
 export default function RootLayout({
