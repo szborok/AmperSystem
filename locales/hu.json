@@ -6,15 +6,13 @@
     "header5": "Kapcsolat"
   },
   "hero": {
-    "heroTitle1": "Világítás szakértői villanyszerelési szolgáltatásokkal",
-    "heroText1": "Lakossági javításoktól a komplex kereskedelmi telepítésekig, megbízható partnerünk minden villanyszerelési igényhez.",
+    "heroTitle1": "Villanyszerelés szakemberekttől, korrekt áron",
+    "heroText1": "Modern technológia megoldásainkkal biztos alapot nyújtunk ügyfeleink részére - megbizhatóság, szakértelem és hosszú távú egyuttműködés egy helyen.",
     "heroButton1": "Ingyenes árajánlat",
     "heroButton2": "Sürgősségi hívás",
-    "heroCard1": "Teljes körű biztosítottság",
-    "heroCard2": "Gyors válasz",
-    "heroCard3": "24/7 szolgáltatás",
-    "heroCard4": "Megbízható szakértők",
-    "heroCard5": "Versenyképes árak"
+    "heroCard1": "Teljes körűen biztosított",
+    "heroCard2": "Minősített szakemberek",
+    "heroCard3": "0-24 SOS szolgáltatás"
   },
   "services": {
     "servicesTitle10": "Szolgáltatásaink",
@@ -24,15 +22,19 @@
         "title": "Lakossági szolgáltatások",
         "cards": [
           {
-            "title": "Háztartási gépek beszerelése",
-            "text": "Garanciális bekötése tűzhelyek, sütők és egyéb háztartartási berendezéseknek"
+            "title": "Háztartási gépek garanciális bekötése",
+            "text": "Garanciális bekötése tűzhelyek, sütők és egyéb háztartartási berendezéseknek IDE KELL IRNI A PECSETOLS DUMADAT"
           },
           {
-            "title": "Biztonság technika",
+            "title": "Villanyóra szabványosítása és bővítése",
+            "text": "Garanciális bekötése tűzhelyek, sütők és egyéb háztartartási berendezéseknek IDE KELL IRNI A PECSETOLS DUMADAT"
+          },
+          {
+            "title": "Világítás technika",
             "text": "IDE TALALJATOK KI SZOVEGET"
           },
           {
-            "title": "SOS Villanyszerelés",
+            "title": "VBF - Villamos Biztonsági Felülvizsgálat",
             "text": "IDE TALALJATOK KI SZOVEGET"
           }
         ]
@@ -42,7 +44,7 @@
         "cards": [
           {
             "title": "Teljes projektek kivitelezés",
-            "text": "Átfogó villanyszerelési szolgáltatások vállalkozások számára - ATNEZNI"
+            "text": "IDE TALALJATOK KI SZOVEGET"
           },
           {
             "title": "Épület karbantartás",
@@ -50,11 +52,11 @@
           },
           {
             "title": "Sürgősségi javítások 0-24",
-            "text": "24/7 sürgősségi villanyszerelési javítási szolgáltatások"
+            "text": "IDE TALALJATOK KI SZOVEGET"
           },
           {
             "title": "Villamos Biztonsági Felülvizsgálat",
-            "text": "Alapos villamos biztonsági auditok és tanúsítványok"
+            "text": "IDE TALALJATOK KI SZOVEGET"
           }
         ]
       }
@@ -63,13 +65,13 @@
   "about": {
     "title10": "Rólunk",
     "text10": "Elkötelezett szakemberek csapata vagyunk, akik kiváló minőségű villanyszerelési szolgáltatásokat nyújtanak.",
-    "text11": "Küldetésünk, hogy ügyfeleink biztonságát és elégedettségét biztosítsuk magas színvonalú villanyszerelési megoldásokkal.",
-    "title30": "Értékeink",
-    "text30": "Hiszünk az integritásban, a minőségben és az ügyfél elégedettségében.",
+
+    "title30": "Ideologiank",
+    "text30": "IDE VAGY 10 MONDATBAN AZ KELL, HOGY MIERT NEM VAGYTOK KOKLER CIGANYOK, NEM IGERGETTEK, NEM SZORAKOZTOK MAS IDEJEVEL, TUDJATOK HOGY A SZAKMATOK EMBER ELETEKKEL JATSZIK.",
     "text40": "Év",
     "cards": [
       {
-        "title": "Teljes biztosított",
+        "title": "Teljes körűen biztosított",
         "text": "Cégünk felelősségbiztosítással rendelkezik, biztosítva ügyfeleink nyugalmát."
       },
       {
